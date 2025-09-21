@@ -34,7 +34,7 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Replace the default avatar with a professional headshot or logo
-avatar: "https://avatars.githubusercontent.com/u/5166585?v=4"
+avatar: "https://ca.slack-edge.com/T02T01M9Y-U034TEH2DFG-9c5ef1a60ae2-512"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
