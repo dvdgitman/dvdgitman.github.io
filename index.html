@@ -3,3 +3,155 @@ layout: home
 title: David Gitman
 subtitle: DevOps & Cloud Engineer | Automating Infrastructure with Terraform, AWS, and Kubernetes
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Gitman | DevOps & Backend Engineer</title>
+    <link rel="shortcut icon" href="./assets/images/me.ico" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --primary-text: #c9d1d9;
+            --secondary-text: #8b949e;
+            --accent-color: #58a6ff;
+            --border-color: #30363d;
+            --card-bg: #161b22;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--primary-text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; color: white; }
+        h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        h2 { font-size: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 30px; }
+        h3 { font-size: 1.5rem; color: var(--primary-text); margin-bottom: 10px; }
+        p { color: var(--secondary-text); margin-bottom: 1rem; max-width: 75ch; }
+        a { color: var(--accent-color); text-decoration: none; transition: opacity 0.2s; }
+        a:hover { opacity: 0.8; }
+        header { text-align: center; }
+        .subtitle { font-size: 1.25rem; color: var(--primary-text); margin-top: 0; margin-bottom: 20px; }
+        .social-links { display: flex; justify-content: center; gap: 20px; font-size: 2rem; }
+        .project-card, .skills-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 30px; }
+        .project-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+        .tag { background-color: rgba(88, 166, 255, 0.1); color: var(--accent-color); padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 500; }
+        pre { background-color: #010409; padding: 20px; border-radius: 6px; overflow-x: auto; font-family: monospace; font-size: 0.9rem; margin-top: 20px; border: 1px solid var(--border-color); }
+        .skills-table { width: 100%; border-collapse: collapse; }
+        .skills-table th, .skills-table td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border-color); }
+        .skills-table th { color: var(--primary-text); }
+        footer { text-align: center; color: var(--secondary-text); border-top: 1px solid var(--border-color); padding-top: 30px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>David Gitman</h1>
+            <p class="subtitle">DevOps & Backend Engineer</p>
+            <div class="social-links">
+                <a href="https://github.com/dvdgitman" target="_blank" title="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+                <a href="https://www.linkedin.com/in/davidgman/" target="_blank" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="mailto:dgitman94@gmail.com" title="Email"><ion-icon name="mail-outline"></ion-icon></a>
+            </div>
+        </header>
+
+        <section id="about">
+            <p style="font-size: 1.1rem; text-align: center; max-width: 80ch; margin: 0 auto;">
+                Passionate engineer with a journey from hands-on integration to leading DevOps processes and now building robust backend systems at Wix. I thrive on solving complex problems, whether it's architecting a CI/CD pipeline, automating infrastructure with Terraform, or diving deep into code.
+            </p>
+        </section>
+        
+        <section id="skills">
+            <h2>Core Technologies</h2>
+            <div class="skills-card">
+                <table class="skills-table">
+                    <tr>
+                        <th>Category</th>
+                        <th>Key Technologies</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Infrastructure as Code</strong></td>
+                        <td>Terraform, Ansible, Helm</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Containerization</strong></td>
+                        <td>Docker, Kubernetes (EKS)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CI/CD</strong></td>
+                        <td>Jenkins, GitHub Actions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cloud Platforms</strong></td>
+                        <td>Amazon Web Services (AWS), Google Cloud Platform (GCP)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Monitoring & Logging</strong></td>
+                        <td>Kibana, Elasticsearch, Prometheus, Grafana</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scripting</strong></td>
+                        <td>Bash, Python</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="project">
+            <h2>Featured Project</h2>
+            <div class="project-card">
+                <h3>Automated Home Media Server</h3>
+                <div class="project-tags">
+                    <span class="tag">Docker</span>
+                    <span class="tag">Automation</span>
+                    <span class="tag">Homelab</span>
+                    <span class="tag">Linux</span>
+                </div>
+                <p>To apply DevOps principles in a practical, hands-on environment, I built a fully automated personal media server. The entire system, including Plex, Sonarr, and Radarr, is defined and managed in a single `docker-compose.yml` file, making it a true Infrastructure as Code project.</p>
+                <pre><code>version: "3.7"
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Jerusalem
+    volumes:
+      - /path/to/plex/config:/config
+      - /path/to/media/tv:/tv
+    restart: unless-stopped</code></pre>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 David Gitman. Be'er Sheva, Israel.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
