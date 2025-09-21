@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Gitman | DevOps & Backend Engineer</title>
-    <link rel="shortcut icon" href="./assets/images/me.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/12101344?v=4" type="image/x-icon">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,22 +46,59 @@
         a { color: var(--accent-color); text-decoration: none; transition: opacity 0.2s; }
         a:hover { opacity: 0.8; }
         header { text-align: center; }
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--border-color);
+            margin-bottom: 20px;
+        }
         .subtitle { font-size: 1.25rem; color: var(--primary-text); margin-top: 0; margin-bottom: 20px; }
-        .social-links { display: flex; justify-content: center; gap: 20px; font-size: 2rem; }
+        .social-links { display: flex; justify-content: center; align-items: center; gap: 20px; font-size: 2rem; margin-bottom: 20px; }
         .project-card, .skills-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 30px; }
         .project-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
         .tag { background-color: rgba(88, 166, 255, 0.1); color: var(--accent-color); padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 500; }
         pre { background-color: #010409; padding: 20px; border-radius: 6px; overflow-x: auto; font-family: monospace; font-size: 0.9rem; margin-top: 20px; border: 1px solid var(--border-color); }
-        .skills-table { width: 100%; border-collapse: collapse; }
-        .skills-table th, .skills-table td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border-color); }
-        .skills-table th { color: var(--primary-text); }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .skills-category h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--primary-text);
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+        .skills-category ul { list-style: none; padding: 0; }
+        .skills-category li { margin-bottom: 8px; }
+        .resume-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color) !important;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+        .resume-button:hover {
+            transform: translateY(-2px);
+            opacity: 1;
+        }
         footer { text-align: center; color: var(--secondary-text); border-top: 1px solid var(--border-color); padding-top: 30px; }
     </style>
 </head>
 <body>
 
     <div class="container">
-         <header>
+        <header>
+            <img src="https://avatars.githubusercontent.com/u/12101344?v=4" alt="David Gitman" class="avatar">
+
             <h1>David Gitman</h1>
             <p class="subtitle">DevOps & Backend Engineer</p>
             <div class="social-links">
@@ -70,6 +106,8 @@
                 <a href="https://www.linkedin.com/in/davidgman/" target="_blank" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
                 <a href="mailto:dgitman94@gmail.com" title="Email"><ion-icon name="mail-outline"></ion-icon></a>
             </div>
+            
+            <a href="https://drive.google.com/uc?export=download&id=1MlkRfIhEGz7Qc9hCcewDhFDfCPps1pa2" class="resume-button" target="_blank">Download Resume</a>
         </header>
         
         <section id="about">
@@ -81,36 +119,51 @@
         <section id="skills">
             <h2>Core Technologies</h2>
             <div class="skills-card">
-                <table class="skills-table">
-                    <tr>
-                        <th>Category</th>
-                        <th>Key Technologies</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Infrastructure as Code</strong></td>
-                        <td>Terraform, Ansible, Helm</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Containerization</strong></td>
-                        <td>Docker, Kubernetes (EKS)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>CI/CD</strong></td>
-                        <td>Jenkins, GitHub Actions</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Cloud Platforms</strong></td>
-                        <td>Amazon Web Services (AWS), Google Cloud Platform (GCP)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Monitoring & Logging</strong></td>
-                        <td>Kibana, Elasticsearch, Prometheus, Grafana</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Scripting</strong></td>
-                        <td>Bash, Python</td>
-                    </tr>
-                </table>
+                <div class="skills-grid">
+                    <div class="skills-category">
+                        <h4>Infrastructure as Code</h4>
+                        <ul>
+                            <li><a href="#" target="_blank">Terraform</a></li>
+                            <li><a href="#" target="_blank">Ansible</a></li>
+                            <li><a href="#" target="_blank">Helm</a></li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h4>Containerization</h4>
+                        <ul>
+                            <li><a href="#" target="_blank">Docker</a></li>
+                            <li><a href="#" target="_blank">Kubernetes (EKS)</a></li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h4>CI/CD</h4>
+                        <ul>
+                            <li><a href="#" target="_blank">Jenkins</a></li>
+                            <li><a href="#" target="_blank">GitHub Actions</a></li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h4>Cloud Platforms</h4>
+                        <ul>
+                            <li><a href="#" target="_blank">Amazon Web Services (AWS)</a></li>
+                            <li><a href="#" target="_blank">Google Cloud Platform (GCP)</a></li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h4>Monitoring & Logging</h4>
+                        <ul>
+                            <li><a href="#" target="_blank">Kibana & Elasticsearch</a></li>
+                            <li><a href="#" target="_blank">Prometheus & Grafana</a></li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h4>Scripting</h4>
+                        <ul>
+                            <li><a href="#" target="_blank">Bash</a></li>
+                            <li><a href="#" target="_blank">Python</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -145,7 +198,6 @@ services:
         <footer>
             <p>&copy; 2025 David Gitman. Be'er Sheva, Israel.</p>
         </footer>
-
     </div>
 
 </body>
