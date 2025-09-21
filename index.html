@@ -141,17 +141,17 @@
         <section id="project">
             <h2>Featured Project</h2>
             <div class="project-card">
-                <h3><a href="https://github.com/dvdgitman/qnap-containers" target="_blank">QNAP Container Backups</a></h3>
+                <h3><a href="https://github.com/dvdgitman/qnap-containers" target="_blank">Dockerized Homelab Infrastructure</a></h3>
                 <div class="project-tags">
                     <span class="tag">Docker Compose</span>
-                    <span class="tag">Disaster Recovery</span>
                     <span class="tag">IaC</span>
                     <span class="tag">Cloudflare Tunnel</span>
                     <span class="tag">Uptime Kuma</span>
+                    <span class="tag">Plex</span>
                 </div>
-                <p>This repository contains the `docker-compose.yml` configurations for all services running on my NAS. It serves as a real-world example of Infrastructure as Code for personal infrastructure, allowing for easy re-deployment, migration, or disaster recovery. The stack includes networking with Cloudflare Tunnel and monitoring with Uptime Kuma.</p>
-                <pre><code># Example: cloudflared.yaml
-
+                <p>This repository is the single source of truth for my personal server infrastructure, managed entirely with Docker Compose. It's a real-world example of applying Infrastructure as Code (IaC) principles to a homelab environment, allowing for rapid deployment, easy recovery, and version-controlled configuration of all services.</p>
+                <pre><code># --- cloudflared.yaml ---
+# Securely exposes web services to the internet
 version: "3.6"
 services:
   cloudflared:
@@ -159,8 +159,35 @@ services:
     image: cloudflare/cloudflared:latest
     restart: unless-stopped
     command: tunnel --no-autoupdate run --token [YOUR_TOKEN]
+
+# --- uptime-kuma.yaml ---
+# Self-hosted monitoring for all my services
+version: '3.3'
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: uptime-kuma
     volumes:
-      - ./config:/home/nonroot/.cloudflared/
+      - ./data:/app/data
+    ports:
+      - 3001:3001
+    restart: unless-stopped
+
+# --- plex.yaml ---
+# Media server for streaming content
+version: "3.7"
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - ./config:/config
+      - /share/media:/media
+    restart: unless-stopped
 </code></pre>
             </div>
         </section>
