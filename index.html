@@ -99,33 +99,33 @@
         </section>
         
         <section id="skills">
-            <h2>Core Technologies</h2>
+            <h2>My DevOps Toolkit</h2>
             <div class="skills-card">
                 <div class="skills-grid">
                     <div class="skills-category">
                         <h4>Infrastructure as Code</h4>
                         <ul>
                             <li><a href="https://github.com/dvdgitman/terra-eks-spot" target="_blank">Terraform</a></li>
-                            <li><a href="" target="_blank">Helm</a></li>
+                            <li><a href="#" target="_blank">Helm</a></li>
                         </ul>
                     </div>
                     <div class="skills-category">
                         <h4>Containerization</h4>
                         <ul>
-                            <li><a href="https://github.com/dvdgitman/minecraftserver" target="_blank">Docker</a></li>
-                            <li><a href="" target="_blank">Kubernetes (EKS)</a></li>
+                            <li><a href="https://github.com/dvdgitman/qnap-containers" target="_blank">Docker</a></li>
+                            <li><a href="https://github.com/dvdgitman/terra-eks-spot" target="_blank">Kubernetes (EKS)</a></li>
                         </ul>
                     </div>
                     <div class="skills-category">
                         <h4>CI/CD</h4>
                         <ul>
-                            <li><a href="" target="_blank">GitHub Actions</a></li>
+                            <li><a href="#" target="_blank">GitHub Actions</a></li>
                         </ul>
                     </div>
                     <div class="skills-category">
                         <h4>Cloud Platforms</h4>
                         <ul>
-                            <li><a href="" target="_blank">Amazon Web Services (AWS)</a></li>
+                            <li><a href="#" target="_blank">Amazon Web Services (AWS)</a></li>
                         </ul>
                     </div>
                     <div class="skills-category">
@@ -141,28 +141,27 @@
         <section id="project">
             <h2>Featured Project</h2>
             <div class="project-card">
-                <h3>Automated Home Media Server</h3>
+                <h3><a href="https://github.com/dvdgitman/qnap-containers" target="_blank">QNAP Container Backups</a></h3>
                 <div class="project-tags">
-                    <span class="tag">Docker</span>
-                    <span class="tag">Automation</span>
-                    <span class="tag">Homelab</span>
-                    <span class="tag">Linux</span>
+                    <span class="tag">Docker Compose</span>
+                    <span class="tag">Disaster Recovery</span>
+                    <span class="tag">IaC</span>
+                    <span class="tag">Cloudflare Tunnel</span>
+                    <span class="tag">Uptime Kuma</span>
                 </div>
-                <p>To apply DevOps principles in a practical, hands-on environment, I built a fully automated personal media server. The entire system, including Plex, Sonarr, and Radarr, is defined and managed in a single `docker-compose.yml` file, making it a true Infrastructure as Code project.</p>
-                <pre><code>version: "3.7"
+                <p>This repository contains the `docker-compose.yml` configurations for all services running on my NAS. It serves as a real-world example of Infrastructure as Code for personal infrastructure, allowing for easy re-deployment, migration, or disaster recovery. The stack includes networking with Cloudflare Tunnel and monitoring with Uptime Kuma.</p>
+                <pre><code># Example: cloudflared.yaml
+
+version: "3.6"
 services:
-  plex:
-    image: lscr.io/linuxserver/plex:latest
-    container_name: plex
-    network_mode: host
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Asia/Jerusalem
+  cloudflared:
+    container_name: cloudflared
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run --token [YOUR_TOKEN]
     volumes:
-      - /path/to/plex/config:/config
-      - /path/to/media/tv:/tv
-    restart: unless-stopped</code></pre>
+      - ./config:/home/nonroot/.cloudflared/
+</code></pre>
             </div>
         </section>
 
