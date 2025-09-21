@@ -54,7 +54,7 @@
             margin-bottom: 20px;
         }
         .subtitle { font-size: 1.25rem; color: var(--primary-text); margin-top: 0; margin-bottom: 20px; }
-        .social-links { display: flex; justify-content: center; align-items: center; gap: 20px; font-size: 2rem; margin-bottom: 20px; }
+        .social-links { display: flex; justify-content: center; align-items: center; gap: 25px; font-size: 2.2rem; margin-bottom: 20px; }
         .project-card, .skills-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 30px; }
         .project-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
         .tag { background-color: rgba(88, 166, 255, 0.1); color: var(--accent-color); padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 500; }
@@ -73,23 +73,6 @@
         }
         .skills-category ul { list-style: none; padding: 0; }
         .skills-category li { margin-bottom: 8px; }
-        .resume-button {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--bg-color) !important;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            font-size: 1rem;
-            text-decoration: none;
-            margin-top: 20px;
-            transition: transform 0.2s;
-        }
-        .resume-button:hover {
-            transform: translateY(-2px);
-            opacity: 1;
-        }
         footer { text-align: center; color: var(--secondary-text); border-top: 1px solid var(--border-color); padding-top: 30px; }
     </style>
 </head>
@@ -105,9 +88,8 @@
                 <a href="https://github.com/dvdgitman" target="_blank" title="GitHub"><ion-icon name="logo-github"></ion-icon></a>
                 <a href="https://www.linkedin.com/in/davidgman/" target="_blank" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
                 <a href="mailto:dgitman94@gmail.com" title="Email"><ion-icon name="mail-outline"></ion-icon></a>
+                <a href="https://drive.google.com/uc?export=download&id=1azRbVZxSSHhqqTHTem8ICTXIv0fH-ESV" target="_blank" title="Download Resume"><ion-icon name="newspaper-outline"></ion-icon></a>
             </div>
-            
-            <a href="https://drive.google.com/uc?export=download&id=1azRbVZxSSHhqqTHTem8ICTXIv0fH-ESV" class="resume-button" target="_blank">Download Resume</a>
         </header>
         
         <section id="about">
@@ -138,7 +120,6 @@
                     <div class="skills-category">
                         <h4>CI/CD</h4>
                         <ul>
-                            <li><a href="#" target="_blank">Jenkins</a></li>
                             <li><a href="#" target="_blank">GitHub Actions</a></li>
                         </ul>
                     </div>
@@ -146,21 +127,12 @@
                         <h4>Cloud Platforms</h4>
                         <ul>
                             <li><a href="#" target="_blank">Amazon Web Services (AWS)</a></li>
-                            <li><a href="#" target="_blank">Google Cloud Platform (GCP)</a></li>
                         </ul>
                     </div>
                     <div class="skills-category">
                         <h4>Monitoring & Logging</h4>
                         <ul>
                             <li><a href="#" target="_blank">Kibana & Elasticsearch</a></li>
-                            <li><a href="#" target="_blank">Prometheus & Grafana</a></li>
-                        </ul>
-                    </div>
-                    <div class="skills-category">
-                        <h4>Scripting</h4>
-                        <ul>
-                            <li><a href="#" target="_blank">Bash</a></li>
-                            <li><a href="#" target="_blank">Python</a></li>
                         </ul>
                     </div>
                 </div>
