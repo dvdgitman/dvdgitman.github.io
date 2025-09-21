@@ -1,100 +1,66 @@
 ---
 layout: post
-title: Sample blog post to learn markdown tips
-subtitle: There's lots to learn!
-gh-repo: daattali/beautiful-jekyll
-gh-badge: [star, fork, follow]
-tags: [test]
-comments: true
-mathjax: true
-author: Bill Smith
+title: "Projects & Technical Skills"
+subtitle: "A showcase of my hands-on experience with cloud-native technologies"
+cover-img: /assets/img/code-background.jpg
+tags: [projects, devops, terraform, kubernetes, aws, docker]
+author: David Gitman
 ---
 
-{: .box-success}
-This is a demo post to show you how to write blog posts with markdown.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](https://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/tables/etc.<br/>I also encourage you to look at the [code that created this post](https://raw.githubusercontent.com/daattali/beautiful-jekyll/master/_posts/2020-02-28-sample-markdown.md) to learn some more advanced tips about using markdown in Beautiful Jekyll.
+This page provides a deeper look into my technical capabilities, highlighting a key project and the primary tools I use to build and manage modern infrastructure. My approach is hands-on, focusing on automation and creating resilient, scalable systems.
 
-**Here is some bold text**
+---
 
-## Here is a secondary heading
+## Featured Project: Automated Home Media Server
 
-[This is a link to a different site](https://deanattali.com/) and [this is a link to a section inside this page](#local-urls).
-
-Here's a table:
-
-| Number | Next number | Previous number |
-| :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
-
-You can use [MathJax](https://www.mathjax.org/) to write LaTeX expressions. For example:
-When \\(a \ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-
-How about a yummy crepe?
-
-![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg)
-
-It can also be centered!
-
-![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg){: .mx-auto.d-block :}
-
-Here's a code chunk:
-
-~~~
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-~~~
-
-And here is the same code with syntax highlighting:
-
-```javascript
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-```
-
-And here is the same code yet again but with line numbers:
-
-{% highlight javascript linenos %}
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-{% endhighlight %}
-
-## Boxes
-You can add notification, warning and error boxes like this:
-
-### Notification
+To sharpen my skills in a practical environment, I built a fully automated personal media server using Docker. This "homelab" project mirrors a real-world microservices architecture and reinforces core DevOps principles.
 
 {: .box-note}
-**Note:** This is a notification box.
+**Objective:** Create a self-hosted, personal streaming service that automatically manages and serves media content, all defined as code.
 
-### Warning
+The entire system is orchestrated with a single **Docker Compose** file, making the environment reproducible and easy to manage.
 
-{: .box-warning}
-**Warning:** This is a warning box.
+Key services include:
+* **Plex:** For streaming media to any device.
+* **Sonarr & Radarr:** To automate the management of TV shows and movies.
 
-### Error
+This setup is a practical application of containerization and automation, running 24/7 in a lightweight Linux environment.
 
-{: .box-error}
-**Error:** This is an error box.
+### Core Configuration (`docker-compose.yml`)
 
-## Local URLs in project sites {#local-urls}
+Here’s a simplified snippet of the configuration that defines the Plex service. The full setup includes multiple interconnected containers.
 
-When hosting a *project site* on GitHub Pages (for example, `https://USERNAME.github.io/MyProject`), URLs that begin with `/` and refer to local files may not work correctly due to how the root URL (`/`) is interpreted by GitHub Pages. You can read more about it [in the FAQ](https://beautifuljekyll.com/faq/#links-in-project-page). To demonstrate the issue, the following local image will be broken **if your site is a project site:**
+{% highlight yaml linenos %}
+version: "3.7"
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Jerusalem
+    volumes:
+      - /path/to/your/plex/config:/config
+      - /path/to/your/media/tv:/tv
+      - /path/to/your/media/movies:/movies
+    restart: unless-stopped
+{% endhighlight %}
 
-![Crepe](/assets/img/crepe.jpg)
+---
 
-If the above image is broken, then you'll need to follow the instructions [in the FAQ](https://beautifuljekyll.com/faq/#links-in-project-page). Here is proof that it can be fixed:
+## Core Technology Stack
 
-![Crepe]({{ '/assets/img/crepe.jpg' | relative_url }})
+My skills are centered around the modern tools necessary for building and maintaining cloud-native applications and infrastructure.
 
-<details markdown="1">
-<summary>Click here!</summary>
-Here you can see an **expandable** section
-</details>
+| Category | Key Technologies |
+| :--- | :--- |
+| **Infrastructure as Code** | Terraform, Ansible, Helm |
+| **Containerization** | Docker, Kubernetes (EKS) |
+| **CI/CD** | Jenkins, GitHub Actions |
+| **Cloud Platforms** | Amazon Web Services (AWS), Google Cloud Platform (GCP) |
+| **Monitoring & Logging**| Kibana, Elasticsearch, Prometheus, Grafana |
+| **Scripting** | Bash, Python |
+
+My experience at companies like **Wix** and **Devalore** has allowed me to apply these skills at scale, contributing to robust backend systems and leading complex DevOps initiatives.
