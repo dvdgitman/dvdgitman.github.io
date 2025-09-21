@@ -10,10 +10,10 @@
 ############################
 
 # Name of website - Changed to be more professional and role-specific
-title: My Name | DevOps & Cloud Engineer
+title: David Gitman | DevOps & Cloud Engineer
 
 # Your name to show in the footer
-author: My Name
+author: David Gitman
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -24,7 +24,6 @@ navbar-links:
   Resources:
     # Changed to be more relevant to your professional role.
     # You can link to a page you create with your favorite tools, tutorials, etc.
-    - My Tools: "https://my-website.com/tools"
     - My GitHub: "https://github.com/dvdgitman"
   # This links to your actual GitHub profile, not the theme creator's page.
   GitHub Profile: "https://github.com/dvdgitman"
@@ -35,7 +34,7 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Replace the default avatar with a professional headshot or logo
-avatar: "/assets/img/your-professional-photo.jpg"
+avatar: "https://avatars.githubusercontent.com/u/5166585?v=4"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
@@ -52,12 +51,12 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # All links have been updated to be placeholders or to your GitHub profile.
 social-network-links:
-  email: "your-email@example.com"
+  email: "dgitman94@gmail.com"
   rss: true
   # Your GitHub profile
   github: dvdgitman
   # Your LinkedIn profile is very important for professional networking.
-  linkedin: your-linkedin-username
+  linkedin: davidgman
   # Add other relevant links here
   # twitter: your-twitter-handle
   # stackoverflow: "your-id"
@@ -72,15 +71,15 @@ rss-description: This website showcases my projects, skills, and insights as a D
 
 # Select which social network share links to show in posts
 share-links-active:
-  twitter: true
-  facebook: true
+  twitter: false
+  facebook: false
   linkedin: true
   vk: false
   reddit: false
 
 # How to display the link to your website in the footer
 # Replace with your actual domain name if you have one.
-url-pretty: "MyWebsite.com"
+url-pretty: "davidgman.com"
 
 # Add the website title to the title of every page
 title-on-all-pages: true
