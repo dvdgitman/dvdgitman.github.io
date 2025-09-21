@@ -4,13 +4,9 @@ title: About me
 subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+I'm a DevOps Engineer from Israel with a strong focus on cloud automation and Infrastructure as Code (IaC). My core expertise lies in building and maintaining CI/CD pipelines and deploying containerized applications on the cloud.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
-
-### My story
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+☁️ Cloud Platforms: Primarily AWS, with experience in GCP and other cloud environments.
+🛠️ Core Technologies: Terraform, Ansible, Docker, Kubernetes, Github Actions, and Bash scripting.
+💡 Strengths: I excel at troubleshooting complex system-level issues, thrive in high-pressure environments, and am driven to build efficient, self-healing infrastructure.
+🎬 Personal Lab: In my spare time, I run a fully automated home media server using Plex, Sonarr, and Radarr, all containerized with Docker. It's my personal playground for experimenting with automation and system management.
