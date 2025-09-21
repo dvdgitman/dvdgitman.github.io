@@ -94,7 +94,7 @@
         
         <section id="about">
             <p style="font-size: 1.1rem; text-align: center; max-width: 80ch; margin: 0 auto;">
-                Code. Containers. Cloud. As a DevOps-minded engineer at Wix My expertise is turning complex infrastructure challenges into elegant, automated solutions with Terraform, Kubernetes, and AWS.
+                I build and automate the backbone of the cloud. As a DevOps-minded engineer at Wix, I live at the intersection of software development and infrastructure, turning complex challenges into elegant solutions with <strong>Terraform</strong>, <strong>Kubernetes</strong>, and <strong>AWS</strong>.
             </p>
         </section>
         
@@ -149,7 +149,7 @@
                     <span class="tag">Uptime Kuma</span>
                     <span class="tag">Plex</span>
                 </div>
-                <p>This repository is the single source of truth for my personal server infrastructure, managed entirely with Docker Compose. It's a real-world example of applying Infrastructure as Code (IaC) principles to a homelab environment, allowing for rapid deployment, easy recovery, and version-controlled configuration of all services.</p>
+                <p>This is my homelab, defined entirely as code. This repository uses <strong>Docker Compose</strong> to manage a microservices-style architecture, proving that modern DevOps principles like Infrastructure as Code (IaC) and version control aren't just for the enterprise—they're for any project that values automation and resilience.</p>
                 <pre><code># --- cloudflared.yaml ---
 # Securely exposes web services to the internet
 version: "3.6"
@@ -171,22 +171,6 @@ services:
       - ./data:/app/data
     ports:
       - 3001:3001
-    restart: unless-stopped
-
-# --- plex.yaml ---
-# Media server for streaming content
-version: "3.7"
-services:
-  plex:
-    image: lscr.io/linuxserver/plex:latest
-    container_name: plex
-    network_mode: host
-    environment:
-      - PUID=1000
-      - PGID=1000
-    volumes:
-      - ./config:/config
-      - /share/media:/media
     restart: unless-stopped
 </code></pre>
             </div>
